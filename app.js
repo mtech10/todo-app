@@ -12,8 +12,8 @@ const PORT = process.env.PORT || 3000;
 const { Pool } = pg;
 
 app.use(cors({
-  origin: ['https://github.com/mtech10',
-    'https://localhost:5173'
+  origin: ['https://mtech10.github.io',
+    'http://localhost:5173'
   ],
   methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
@@ -42,6 +42,10 @@ pool.on('error', (err) => {
 });
 
 const SECRET_KEY = 'mysecretkey';
+
+app.get('/', (req, res) => { 
+  res.json({ message: 'Server is running' }); 
+});
 
 app.post('/register', async (req, res) => {
   try {
