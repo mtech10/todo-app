@@ -5,6 +5,8 @@
   "type": "module",
   "homepage": "https://mtech10.github.io/todo-app",
   "scripts": {
+    "start": "node app.js",
+  "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
