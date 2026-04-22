@@ -1,0 +1,168 @@
+body {
+ background-color: black;   
+ color: white;
+ overflow-x: hidden;
+}
+
+h1 {
+    text-align: center;
+}
+
+.todo-container  {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    max-width: 400px; 
+    width: 75%;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 1px 1px 7px rgba(255, 255, 255, 0.418);
+}
+
+.noTask1 {
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.noTask2 {
+    color: #bbb;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.todo-header {
+    margin: 0;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.todo-header-img {
+    height: 200px;
+    max-width: 100%;
+    display: block;
+    margin: 30px auto;
+
+}
+
+.todo-list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.todo-left-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    gap: 15px; 
+}
+
+.todo-right-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    gap: 15px; 
+}
+
+.tasks-details {
+    display: flex;
+    flex-direction: column;
+    text-align: left; 
+}
+
+.todo-date {
+    font-size: 0.75rem;
+    color: #5882ff;
+    font-weight: bolder;
+}
+.main-text {
+    font-size: 1rem;
+    font-weight: bolder;
+    padding: 2px 0;
+}
+
+.small-text {
+    font-size: 0.75rem;
+    color: #bbb;
+    padding: 2px 0;
+}
+
+.main-text, .small-text {
+    margin: 0;
+}
+.check-icon,
+.delete-icon {
+    cursor: pointer;
+}
+
+.check-icon:hover {
+    color: #044604;
+}
+
+.delete-icon:hover {
+    color: red;
+}
+
+.add-task-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    border: none;
+    background-color: #5882ff;
+    color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+}
+
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* This centers all children horizontally */
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.calendar-section {
+  margin-bottom: 20px; 
+}
+
+.completed-header {
+  font-size: 14px;
+  color: #888;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+
+.completed-item {
+  opacity: 0.7;
+}
+  
+
+.logout-btn {
+  background-color: #5882ff;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: #fff;
+  float: right;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.logout-btn:hover,
+.logout-btn:active {
+    background-color: #0056b3;
+}
