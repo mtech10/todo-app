@@ -1,5 +1,6 @@
 import express from 'express';
 import pg from 'pg';
+import pkg from 'pg';
 import bcryptjs from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
@@ -9,7 +10,8 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const { Pool } = pg;
+// const { Pool } = pg;
+const { Pool } = pkg;
 
 app.use(cors({
   origin: ['https://mtech10.github.io',
@@ -21,17 +23,25 @@ app.use(cors({
 }));
 app.use(express.json());
 
+// const pool = new Pool({
+//   connectionString: process.env.DATABASE_URL,
+//   ssl: {
+//     rejectUnauthorized: false,
+//   },
+//   connectionTimeoutMillis: 5000,
+//   user: process.env.DB_USER,
+//   password: process.env.DB_PASSWORD,
+//   host: process.env.DB_HOST,
+//   port: process.env.DB_PORT,
+//   database: process.env.DB_NAME,
+// });
+
+
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: {
-    rejectUnauthorized: false,
-  },
-  connectionTimeoutMillis: 5000,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
-  database: process.env.DB_NAME,
+    rejectUnauthorized: false 
+  }
 });
 
 pool.on('connect', () => {
