@@ -18,8 +18,9 @@ const Register = ({ switchToLogin }) => {
         login(token, user); 
       })
       .catch((error) => {
-        alert(error.response?.data?.message || "Registration failed");
-      });
+       alert("Error Detail: " + (error.response?.data?.error || error.message));
+  console.error(error.response?.data);
+});
   };
 
   return (
