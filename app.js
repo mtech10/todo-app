@@ -44,6 +44,14 @@ const pool = new Pool({
   }
 });
 
+pool.connect((err, client, release) => {
+  if (err) {
+    return console.error('Error acquiring client', err.stack);
+  }
+  console.log('Successfully connected to Supabase');
+  release();
+});
+
 pool.on('connect', () => {
   console.log('Successfully connected to the database!');
 });
