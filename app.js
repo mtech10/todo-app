@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3000;
 const { Pool } = pkg;
 
 app.use(cors({
-  origin: ['https://mtech10.github.io',
+  origin: ['https://github.com/mtech10',
     'http://localhost:5173'
   ],
   methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
