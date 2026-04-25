@@ -13,9 +13,7 @@ const Login = ({ switchToRegister }) => {
 
     axios.post('https://todo-app-backend-jnox.onrender.com/login', { email, password })
       .then((response) => {
-        // Grab the token and user from the backend
         const { token, user } = response.data;
-        // This instantly logs them in and saves the token!
         login(token, user); 
       })
       .catch((error) => {
